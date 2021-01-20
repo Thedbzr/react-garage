@@ -10,6 +10,8 @@ export default class SignUpForm extends Component {
     error: ''
   };
 
+  
+
   handleChange = (evt) => {
     this.setState({
       [evt.target.name]: evt.target.value,
@@ -24,7 +26,7 @@ export default class SignUpForm extends Component {
       delete formData.error;
       delete formData.confirm;
       const user = await signUp(formData);
-      console.log(user);
+      this.props.setUser(user);
     } catch {
       // An error occurred
       this.setState({ error: 'Sign Up Failed - Try Again'});
