@@ -49,3 +49,12 @@ export function getUser() {
   // If there's a token, return the user in the payload, otherwise return null
   return token ? JSON.parse(atob(token.split('.')[1])).user : null;
 }
+
+
+//this is a test
+export function checkToken() {
+  // Just so that you don't forget how to use .then
+  return usersAPI.checkToken()
+    // return a Date object for more flexibility
+    .then(dateStr => new Date(dateStr));
+}
