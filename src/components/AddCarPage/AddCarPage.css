@@ -1,0 +1,7 @@
+form{
+    display: flex;
+    justify-content: center;
+}
+form-group {
+    justify-content: space-around;
+}
